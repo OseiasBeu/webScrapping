@@ -11,8 +11,8 @@ import os, shutil
 
 def insertPlanMiddleware(rows):
     # If modifying these scopes, delete the file token.pickle.
-    SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
-    SAMPLE_SPREADSHEET_ID = '1QSGAY_WyamEQBZ4ITdAGCVAbavR9t-D-4gPQx4Sbf7g'
+    SCOPES = ['']
+    SAMPLE_SPREADSHEET_ID = ''
     SAMPLE_RANGE_NAME = 'middleware'
     """Shows basic usage of the Gmail API.
     Lists the user's Gmail labels.
@@ -30,7 +30,7 @@ def insertPlanMiddleware(rows):
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                'C:\\Users\\beuo\\Documents\\Demandas\\AtualizaMiddleIntegrationVtex\\toolbox\\credentials.json', SCOPES)
+                '', SCOPES)
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
         with open('token.pickle', 'wb') as token:
@@ -115,8 +115,8 @@ def insertPlanMiddleware(rows):
     # print(response)
 
 def insertPlanIntegracoes_h(rows):
-    SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
-    SAMPLE_SPREADSHEET_ID = '1QSGAY_WyamEQBZ4ITdAGCVAbavR9t-D-4gPQx4Sbf7g'
+    SCOPES = ['']
+    SAMPLE_SPREADSHEET_ID = ''
     SAMPLE_RANGE_NAME = 'integracoes_h'
     creds = None
     
