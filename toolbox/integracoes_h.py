@@ -9,10 +9,10 @@ import pandas as pd
 
 def integracoes_h():
   driver = webdriver.Chrome(executable_path='chromedriver.exe')
-  driver.get("https://wsmid-prd.whirlpool.com.br/manager/reports/frmQueryAnalyzer.aspx?menu=2")
-  dominio = 'whirlpool'
-  usuario = 'daniel_coelho'
-  senha = 'Sua95xb4'
+  driver.get("")
+  dominio = ''
+  usuario = ''
+  senha = ''
   bra = "BRA"
   data = '2019-11-01' 
   query = "SELECT Cast(Day(datahoraprocessamento) AS VARCHAR(2)) +'/'+ Cast(Month(datahoraprocessamento) AS VARCHAR(2)) + '/' + Cast(Year(datahoraprocessamento) AS VARCHAR(4)) AS Data, Datepart(hour, datahoraprocessamento)AS Hora, Count(0) AS QtdPedidosVtexMdw FROM pedido WHERE ( datahoraprocessamento >= '2019-11-27 14:00:00' ) GROUP  BY Cast(Day(datahoraprocessamento) AS VARCHAR(2))  + '/' + Cast(Month(datahoraprocessamento) AS VARCHAR(2)) + '/'+ Cast(Year(datahoraprocessamento) AS VARCHAR(4)), Datepart(hour, datahoraprocessamento) ORDER  BY Cast(Day(datahoraprocessamento) AS VARCHAR(2)) + '/' + Cast(Month(datahoraprocessamento) AS VARCHAR(2)) + '/' + Cast(Year(datahoraprocessamento) AS VARCHAR(4)) DESC, Datepart(hour, datahoraprocessamento) DESC " #.format(data)
