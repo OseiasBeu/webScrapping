@@ -10,10 +10,10 @@ import pandas as pd
 
 def middleware():
   driver = webdriver.Chrome(executable_path='chromedriver.exe')
-  driver.get("https://wsmid-prd.whirlpool.com.br/manager/reports/frmQueryAnalyzer.aspx?menu=2")
-  dominio = 'whirlpool'
-  usuario = 'daniel_coelho'
-  senha = 'Sua95xb4'
+  driver.get("")
+  dominio = ''
+  usuario = ''
+  senha = ''
   bra = "BRA" 
   data = '2019-11-01' 
   query = "SELECT pedido.clienteEstado, pedidoItem.warehouseId, count(pedidoItem.warehouseId) as [Pendentes de integração] FROM pedido LEFT JOIN pedidoItem ON pedido.codigoPedido = pedidoItem.codigoPedido WHERE pedido.datahoracriacao > '{}' AND pedido.clientepais = '{}' AND pedido.flagIntegrado = 0 GROUP BY pedidoItem.warehouseId, pedido.clienteEstado ORDER BY [Pendentes de integração] DESC".format(data,bra)
